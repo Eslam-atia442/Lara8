@@ -31,10 +31,16 @@
             <!--begin::Menu Nav-->
             <ul class="menu-nav">
 
-                <li class="menu-item @if( Request::segment(1)== '' ) menu-item-active @endif "  aria-haspopup="true">
+                <li class="menu-item @if( Request::segment(1)== 'home' ) menu-item-active @endif "  aria-haspopup="true">
                     <a href="{{route('home')}}" class="menu-link">
                         <i class="menu-icon flaticon-home"></i>
                         <span class="menu-text">Home</span>
+                    </a>
+                </li>
+                <li class="menu-item @if( Request::segment(1)== 'name' ) menu-item-active @endif "  aria-haspopup="true">
+                    <a href="{{route('name')}}" class="menu-link">
+                        <i class="menu-icon flaticon-home"></i>
+                        <span class="menu-text">yajra</span>
                     </a>
                 </li>
 

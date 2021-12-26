@@ -78,8 +78,11 @@ class NameController extends Controller
      * @param \App\Models\Name $name
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Name $name)
+    public function destroy($id)
     {
-        //
+
+      $name=Name::findorfail($id);
+      $name->delete();
+        return redirect(route('name'));
     }
 }

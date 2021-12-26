@@ -20,8 +20,9 @@ Route::get('/',function (){ return redirect(route('home')); });
 
 Route::group(['middleware'=>'auth:web'], function(){
     Route::get('/home',[HomeController::class,'index'])->name('home');
-    Route::get('/google',[HomeController::class,''])->name('google');
+    // test
     Route::get('/name',[NameController::class,'index'])->name('name');
+    Route::get('/delete/{id}',[NameController::class,'destroy'])->name('delete');
 });
 
 
