@@ -2,15 +2,17 @@
 @section('title')
     name
 @endsection
-@section('header')
 
+@section('header')
 @endsection
 
 
 @section('content')
-
-    {!! $dataTable->table() !!}
-
+    <div class="card">
+        <div class="card-body">
+            {!! $dataTable->table() !!}
+        </div>
+    </div>
 @endsection
 
 
