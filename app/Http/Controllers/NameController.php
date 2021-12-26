@@ -2,15 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\nameDataTable;
+use App\DataTables\UserDataTable;
 use App\Models\Name;
 use Illuminate\Http\Request;
 
 class NameController extends Controller
 {
 
-    public function index()
+    public function index(nameDataTable $dataTable)
     {
 
+    return $dataTable->render('admin.name.index');
     }
 
     /**
