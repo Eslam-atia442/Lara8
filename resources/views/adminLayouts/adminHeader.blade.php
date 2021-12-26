@@ -24,10 +24,13 @@
     <link href="assets/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
     <!--end::Layout Themes-->
+
+    <!--begin yajra datatable-->
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico"  />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css"
+    <!--end yajra datatable-->
     @yield('header')
 </head>
 <!--end::Head-->
