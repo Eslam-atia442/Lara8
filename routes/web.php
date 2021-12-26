@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 Auth::routes();
 Route::get('/logout',[HomeController::class,'logout'])->name('signout');
+Route::get('/',function (){ return redirect(route('home')); });
 
 Route::group(['middleware'=>'auth:web'], function(){
     Route::get('/home',[HomeController::class,'index'])->name('home');

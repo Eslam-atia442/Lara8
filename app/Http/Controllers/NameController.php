@@ -3,17 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\nameDataTable;
-use App\DataTables\UserDataTable;
 use App\Models\Name;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
 
 class NameController extends Controller
 {
 
+
     public function index(nameDataTable $dataTable)
     {
-
-    return $dataTable->render('admin.name.index');
+        return $dataTable->render('admin.name.index');
     }
 
     /**
@@ -29,7 +30,7 @@ class NameController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -40,7 +41,7 @@ class NameController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Name  $name
+     * @param \App\Models\Name $name
      * @return \Illuminate\Http\Response
      */
     public function show(Name $name)
@@ -51,7 +52,7 @@ class NameController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Name  $name
+     * @param \App\Models\Name $name
      * @return \Illuminate\Http\Response
      */
     public function edit(Name $name)
@@ -62,8 +63,8 @@ class NameController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Name  $name
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\Name $name
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Name $name)
@@ -74,7 +75,7 @@ class NameController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Name  $name
+     * @param \App\Models\Name $name
      * @return \Illuminate\Http\Response
      */
     public function destroy(Name $name)

@@ -1,6 +1,6 @@
 @extends('adminLayouts.app')
 @section('title')
-    name
+    Test yajra
 @endsection
 
 @section('header')
@@ -13,6 +13,7 @@
             {!! $dataTable->table() !!}
         </div>
     </div>
+
 @endsection
 
 
