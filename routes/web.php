@@ -19,8 +19,7 @@ Route::get('/logout',[HomeController::class,'logout'])->name('signout');
 
 Route::group(['middleware'=>'auth:web'], function(){
     Route::get('/home',[HomeController::class,'index'])->name('home');
-    Route::get('/google',[HomeController::class,'google'])->name('google');
-    Route::get('/',[HomeController::class,'index']);
+    Route::get('/google',[HomeController::class,''])->name('google');
 });
 
 
