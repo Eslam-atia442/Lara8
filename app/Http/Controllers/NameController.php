@@ -80,9 +80,8 @@ class NameController extends Controller
      */
     public function destroy($id)
     {
-
-      $name=Name::findorfail($id);
-      $name->delete();
+        $name = Name::findorfail($id);
+        $name->delete();
         return redirect(route('name'));
     }
 }

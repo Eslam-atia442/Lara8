@@ -16,6 +16,8 @@ class CreateNamesTable extends Migration
         Schema::create('names', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('description');
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }

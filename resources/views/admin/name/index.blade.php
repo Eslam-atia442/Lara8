@@ -8,12 +8,12 @@
 
 
 @section('content')
+    {{\App\Models\Name::count()}}
     <div class="card">
         <div class="card-body">
             {!! $dataTable->table() !!}
         </div>
     </div>
-
 
 @endsection
 

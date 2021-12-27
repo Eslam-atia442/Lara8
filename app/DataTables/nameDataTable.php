@@ -3,6 +3,7 @@
 namespace App\DataTables;
 
 use App\Models\name;
+use Carbon\Carbon;
 use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Html\Editor\Editor;
@@ -19,10 +20,11 @@ class nameDataTable extends DataTable
      */
     public function dataTable($query)
     {
+        
         return datatables()
             ->eloquent($query)
-            ->addColumn('action', '<a href="delete/{{$id}}" > delete</a> <a href="delete/{{$id}}" > update</a>');
-
+            ->addColumn('action', '</i><a  href="delete/{{$id}}" > <i class="fa la-trash text-danger mr-5"></a>')
+            ->editColumn('created_at', function($data){ $formatedDate = Carbon::createFromFormat('Y-m-d H:i:s', $data->created_at)->format('d-m-Y'); return $formatedDate; });
     }
 
     /**
@@ -47,7 +49,7 @@ class nameDataTable extends DataTable
             ->setTableId('name-table')
             ->columns($this->getColumns())
             ->minifiedAjax()
-            -> orderBy(1)
+            ->orderBy(1)
             ->lengthMenu(
                 [
                     [10, 25, 50, -1],
@@ -66,6 +68,9 @@ class nameDataTable extends DataTable
         return [
             'id',
             'name',
+            'description',
+            'email',
+            'created_at',
             'action',
         ];
     }

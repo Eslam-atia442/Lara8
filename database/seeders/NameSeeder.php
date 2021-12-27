@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Name;
 use Illuminate\Database\Seeder;
 
 class NameSeeder extends Seeder
@@ -13,6 +14,6 @@ class NameSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Name::factory()->times(100000)->create();
     }
 }

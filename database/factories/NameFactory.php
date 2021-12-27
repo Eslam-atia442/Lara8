@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class NameFactory extends Factory
 {
@@ -14,7 +15,9 @@ class NameFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name,
+            'description' => Str::random(10),
+            'email' => $this->faker->unique()->safeEmail,
         ];
     }
 }
